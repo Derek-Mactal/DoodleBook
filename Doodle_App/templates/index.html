@@ -10,8 +10,24 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <script src="{% static 'js/scripts.js' %}"></script>
     </head>
-    <header><h1>Hello</h1></header>
+    <header>
+        <h1>DoodleBook</h1>
+        <h4>Blog all day</h4>
+    </header>
     <body>
-        <h1>This will be the dingus</h1>
+        <div class="container">
+            <form>
+                <h2>Log In</h2>
+                <div class="row">
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+                <div class="row">
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <input type="submit" value="Log In">
+            </form>
+        </div>
     </body>
 </html>
