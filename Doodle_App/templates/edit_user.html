@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/edit_user.css' %}">
+    <title>User Controls</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <li>DoodleBook</li>
+            <li><a href ="#">Welcome: User!</a></li>
+            <li><a href ="#">Home</a></li>
+            <li><a class ="logout" href ="#">Log Out</a></li>
+        </ul>
+    </header>
+    <div class = 'container'>
+        <h1>Edit User Below..</h1>
+        <form action = "#" method = "POST">
+            <label>Change Username:</label>
+            <input type = "text" name = "username">
+            <label>Change Firstname:</label>
+            <input type = "text" name = "firstname">
+            <label>Change Lastname:</label>
+            <input type = "text" name = "lastname">
+            <label>Change email:</label>
+            <input type = "text" name = "email">
+            <label>Change password:</label>
+            <input type = "text" name = "password">
+            <label>Password Confirmation:</label>
+            <input type = "text" name = "password_confirmation">
+
+            <input class = 'submit' type = "submit" value = "make changes">
+        </form>
+    </div>
+</body>

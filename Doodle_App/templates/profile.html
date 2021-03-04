@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <title>My Profile</title>
+</head>
+<body>
+    <header>
+        <h1>DoodleBook</h1>
+        <a href="">Home</a>
+        <a href="">Logout</a>
+    </header>
+    <body>
+        <h3 id="welcome">Welcome (User's name)</h3>
+        <div class="container">
+            <form>
+                <h4>Create a new blog</h4>
+                <label>Title</label>
+                <input>
+                <textarea></textarea>
+                <div class="blogChoice">
+                    <div class="row">
+                        <label for="public">Public</label>
+                        <input type="radio" id="public" name="privacy" value="public">
+                    </div>
+                    <div class="row">
+                        <label for="private">Private</label>
+                        <input type="radio" id="private" name="privacy" value="private">
+                    </div>
+                </div>
+                <input type="submit" value="Post">
+            </form>
+        </div>
+    </body>
+</body>
+</html>

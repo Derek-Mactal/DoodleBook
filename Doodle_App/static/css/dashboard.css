@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header{
+    /* display: flex;
+    align-items: center;
+    background-color: aliceblue;
+    border: 1px black solid;
+    font-size: 30px;
+    height: 85px; */
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(143, 143, 202);
+    font-size: 40px;
+    color: white;
+    padding: 20px;
+}
+header ul{
+    list-style-type: none;
+    display: flex;
+    margin-left: -20px;
+    
+}
+header ul li{
+    display: inline;
+    align-items: center;
+}
+header ul li a{
+    margin-left: 100px;
+}
+            .logout{
+                margin-left: 800px;
+            }
+
+.container {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    /* border: 2px dotted red; */
+}
+
+.blogs {
+    display:flex;
+    height:fit-content;
+    justify-content: center;
+    /* border: 2px dotted blue; */
+}
+.blogs p{
+    display: block;
+}
+
+.container form input{
+    margin-left: 95%;
+}
+
+.blogs h2,h4{
+    font-size: 30px;
+}
+
+.blogs section .blog-text{
+    outline: 2px solid black;
+    width: 600px;
+    height: 150px;
+}
+.blogs section section{
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    font-size: larger;
+}
+.blogs section section .comment{
+    margin-right: 10px;
+}
+.blogs form{
+    display: flexbox;
+    /* justify-content: flex-end; */
+    flex-wrap: wrap;
+}
+.blogs form .comment{
+    height: 35px;
+    width: 500px;
+    margin-top: 10px;
+    display: block;
+    justify-self: flex-end;
+}
