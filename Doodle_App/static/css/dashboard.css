@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
 
 header{
@@ -12,7 +12,6 @@ header{
     font-size: 30px;
     height: 85px; */
     display: flex;
-    padding: 10px;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(143, 143, 202);
@@ -20,71 +19,53 @@ header{
     color: white;
     padding: 20px;
 }
-header ul{
-    list-style-type: none;
+header .nav {
     display: flex;
-    margin-left: -20px;
-    
-}
-header ul li{
-    display: inline;
     align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    width: 500px;
 }
-header ul li a{
-    margin-left: 100px;
+header .nav a {
+    color: white;
 }
-            .logout{
-                margin-left: 800px;
-            }
 
 .container {
     display: flex;
     justify-content: center;
     font-size: 30px;
     /* border: 2px dotted red; */
+    margin-top: 50px;
 }
 
-.blogs {
-    display:flex;
-    height:fit-content;
-    justify-content: center;
-    /* border: 2px dotted blue; */
-}
-.blogs p{
-    display: block;
+.container form {
+    background-color: #bfc4cc;
+    padding: 40px;
+    border-radius: 25px;
 }
 
-.container form input{
-    margin-left: 95%;
-}
-
-.blogs h2,h4{
-    font-size: 30px;
-}
-
-.blogs section .blog-text{
-    outline: 2px solid black;
+.container form textarea {
     width: 600px;
-    height: 150px;
-}
-.blogs section section{
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
-    font-size: larger;
-}
-.blogs section section .comment{
-    margin-right: 10px;
-}
-.blogs form{
-    display: flexbox;
-    /* justify-content: flex-end; */
-    flex-wrap: wrap;
-}
-.blogs form .comment{
-    height: 35px;
-    width: 500px;
-    margin-top: 10px;
+    height: 300px;
+    font-size: 18px;
+    padding: 4px;
     display: block;
-    justify-self: flex-end;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container form input[type=submit] {
+    width: 70px;
+    height: 30px;
+    font-size: 15px;
+    margin: auto;
+}
+
+.container form .submit {
+    display: flex;
+    margin: auto;
+}
+.blogs h1 {
+    padding-left: 140px;
+    font-size: 60px;
 }

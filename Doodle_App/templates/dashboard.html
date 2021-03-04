@@ -8,41 +8,26 @@
     <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
     <title>Document</title>
 </head>
+<header>
+    <h1>DoodleBook</h1>
+    <div class="nav">
+        <p>Welcome <a href="">User</a>!</p>
+        <a href="/logout">Logout</a>
+    </div>
+</header>
 <body>
-    <header>
-        <ul>
-            <li>DoodleBook</li>
-            <li><a href ="#">Welcome: User!</a></li>
-            <li><a href ="#">Home</a></li>
-            <li><a class ="logout" href ="#">Log Out</a></li>
-        </ul>
-    </header>
     <div class="container">
         <form action = "#" method = "POST">
             <h2>Create a Blog</h2>
             <textarea></textarea>
-            <input type="submit" value="Post">
+            <div class="submit">
+                <input type="submit" value="Post">
+            </div>
         </form>
     </div>
     <div class="blogs">
-        <section>
-            <h2>Blogs</h2>
-            <h4>By: Blog Poster</h4>
-            <h4>Created on: </h4>
-            <p class = "blog-text">BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH</p>
-            <section>
-                <a href ="#">Person: </a> 
-                <p class ='comment'>This is a comment for the post</p>
-            </section> 
-            <section>
-                <a href ="#">Person: </a> 
-                <p class ='comment'>This is a another comment for the post</p>
-            </section> 
-            <form action = "#" method = "POST">
-                <input class ="comment" type ="text" placeholder="type in here to comment">
-                <input type="submit" value = "Post">
-            </form>
-        </section>
+        <h1>Blogs</h1>
+        
     </div>
 </body>
 </html>

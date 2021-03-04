@@ -92,3 +92,30 @@ from django.db import models
 #     reverse lookup
 #         this_publisher.books.all()	# get all the books this publisher is publishing
 #         this_book.p ublishers.all()	# get all the publishers for this book
+
+class User(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=40)
+    email = models.CharField(max_length=70)
+    password = models.CharField(max_length=100)
+    bio = models.TextField(default="User Bio")
+    user_level = models.IntegerField(default=0) # 0 is regular, 1 is admin
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    #blogs
+    #user_comments
+
+class Blog(models.Model):
+    title = models.CharField(max_length=100)
+    author = models.ForeignKey(User, related_name="blogs", on_delete = models.CASCADE)
+    desc = models.TextField()
+    privacy = models.IntegerField(default=0) # 0 is public, 1 is private
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    #blog_comments
+
+class Comment(models.Model):
+    posted_by = models.ForeignKey(User, related_name="user_comments", on_delete = models.CASCADE)
+    posted_to = models.ForeignKey(Blog, related_name="blog_comments", on_delete = models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
