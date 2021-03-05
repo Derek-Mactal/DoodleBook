@@ -14,22 +14,27 @@
         <h1>DoodleBook</h1>
         <div class="nav">
             <p>Welcome <a href="">User</a>!</p>
+            <a href="">Home</a>
             <a href="/logout">Logout</a>
         </div>
     </header>
-    <input class ="return" type = "submit" value = "return to dashboard">
     <div class = 'container'>
-        <h1>Edit User Below..</h1>
         <form action = "#" method = "POST">
+            <h1>Edit User Below..</h1>
             <label>Change Username:</label>
             <input type = "text" name = "username">
-            <label>Change email:</label>
+            <label>Change Email:</label>
             <input type = "text" name = "email">
-            <label>Change password:</label>
-            <input type = "text" name = "password">
-
-            <input class = 'submit' type = "submit" value = "make changes">
-            <input class = 'delete' type = "submit" value = "delete user">
+            <label>Change Password:</label>
+            <input type = "password" name = "password">
+            <label>Confirm Change Password:</label>
+            <input type="password" name="confirmPassword">
+            <div class="admin">
+                <label for="allowAdmin">Allow Admin Role:</label>
+                <input type="radio" id="allowAdmin" name="gender" value="1">
+            </div>
+            <input class="notDelete" type = "submit" value = "Make Changes">
+            <input class="delete" type = "submit" formaction="/deleteUser" value = "Delete User">
         </form>
     </div>
 </body>
