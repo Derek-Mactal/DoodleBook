@@ -18,6 +18,7 @@
 <body>
     <div class="container">
         <form action = "#" method = "POST">
+            {% csrf_token %}
             <h2>Create a Blog</h2>
             <textarea></textarea>
             <div class="submit">
@@ -26,13 +27,15 @@
         </form>
     </div>
     <div class="blogs">
-        <h1>HEKALSDHSDALKSHDASKLDHJ</h1>
-        {% for blog in blogs %}
-            {{blog.title}}
-            {{blog.author.first_name}}{{blog.author.last_name}}
-            {{blog.desc}}
-            {{blog.created_at}}
-        {% endfor %}
+        <div>
+            <h1>Blogs</h1>
+            {% for blog in blogs %}
+                {{blog.title}}
+                {{blog.author.first_name}}{{blog.author.last_name}}
+                {{blog.desc}}
+                {{blog.created_at}}
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>
