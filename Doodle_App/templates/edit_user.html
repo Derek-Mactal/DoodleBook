@@ -21,6 +21,7 @@
     <div class = 'container'>
         <h1>Edit User Below..</h1>
         <form action = "#" method = "POST">
+            {% csrf_token %}
             <div>
                 <label>Change Username:</label>
                 <input type = "text" name = "username">
