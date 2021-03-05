@@ -26,8 +26,15 @@
         </form>
     </div>
     <div class="blogs">
-        <h1>Blogs</h1>
-        
+        <div>
+            <h1>Blogs</h1>
+            {% for blog in blogs %}
+                {{blog.title}}
+                {{blog.author.first_name}}{{blog.author.last_name}}
+                {{blog.desc}}
+                {{blog.created_at}}
+            {% endfor %}
+        </div>
     </div>
 </body>
 </html>
