@@ -14,9 +14,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(143, 143, 202);
+    background-color: #e63946;
     font-size: 40px;
-    color: white;
+    color: #2b2d42;
     padding: 20px;
 }
 header .nav {
@@ -39,11 +39,12 @@ header .nav a {
 }
 
 form {
-    background-color: #bfc4cc;
+    background-color: #457b9d;
     padding: 40px;
     border-radius: 25px;
     height: 500px;
     width: 500px;
+    color: #0e1b2c;
 }
 
 form h2 {

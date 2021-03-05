@@ -8,9 +8,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(143, 143, 202);
+    background-color: #e63946;
     font-size: 40px;
-    color: white;
+    color: #2b2d42;
     padding: 30px;
 }
 
@@ -29,7 +29,7 @@ header .nav a {
     margin: auto;
     margin-top: 40px;
     outline: red dotted 1px;
-    background-color: rgb(195, 193, 193);
+    background-color: #457b9d;
     display: block;
     /* justify-content: flex-start; */
     border-radius: 20px;
@@ -37,6 +37,7 @@ header .nav a {
     height: 775px;
     padding: 20px;
     margin-bottom: 80px;
+    color: #0e1b2c;
 }
 
 

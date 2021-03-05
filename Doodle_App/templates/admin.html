@@ -17,30 +17,29 @@
             <a href="/logout">Logout</a>
         </div>
     </header>
-
     <div class = 'container'>
+        <h1>Users</h1>
         <table>
             <tr>
-                <td><a href = "#">Users Name (link)</a></td>
-                <td>Email</td>
-                <td>Created on:</td>
-                <td>User Level</td>
-                <td>Actions</td>
+                <th>User's Name</a></th>
+                <th>Email</th>
+                <th>Created on:</th>
+                <th>User Level</th>
+                <th>Actions</th>
             </tr>
+            {% for user in users.all %}
             <tr>
-                <td>The first user</td>
-                <td>user@gmail.com</td>
-                <td>february 21, 2021</td>
-                <td>Noobie</td>
-                <td><a href = "#">Delete</a> | <a href = "#">Edit</a> | <a href = "#">View</a> </td>
+                <td>{{user.first_name}} {{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.created_at}}</td>
+                {%if user.user_level == 0%}
+                <td>Regular User</td>
+                {% else %}
+                <td>Admin</td>
+                {% endif %}
+                <td><a href = "/delete/{{user.id}}">Delete</a> | <a href = "/admin_edit/{{user.id}}">Edit</a> | <a href = "/profile/{{user.id}}">View</a> </td>
             </tr>
-            <tr>
-                <td>A-dawg</td>
-                <td>nella@gmail.com</td>
-                <td>february 21, 2021</td>
-                <td>DoodleBook Creator</td>
-                <td><a href = "#">Delete</a> | <a href = "#">Edit</a> | <a href = "#">View</a> </td>
-            </tr>
+            {% endfor %}
         </table>
     </div>
 </body>

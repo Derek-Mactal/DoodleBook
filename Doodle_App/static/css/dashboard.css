@@ -15,9 +15,9 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(143, 143, 202);
+    background-color: #e63946;
     font-size: 40px;
-    color: white;
+    color: #2b2d42;
     padding: 20px;
 }
 header .nav {
@@ -40,9 +40,10 @@ header .nav a {
 }
 
 .container form {
-    background-color: #bfc4cc;
+    background-color: #457b9d;
     padding: 40px;
     border-radius: 25px;
+    color: #0e1b2c;
 }
 
 .container form textarea {
@@ -79,12 +80,16 @@ header .nav a {
     font-size: 60px;
 }
 .bloginfo{
-    background-color: #bfc4cc;
+    background-color: #457b9d;
     width: 610px;
     font-size: 18px;
     padding: 40px;
     border-radius: 25px;
+<<<<<<< HEAD
     
+=======
+    color: #0e1b2c;
+>>>>>>> e02ebad00139709df8b6dd9cad38028959398538
 }
 
 .description{
