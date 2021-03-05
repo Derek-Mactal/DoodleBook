@@ -118,5 +118,6 @@ class Blog(models.Model):
 class Comment(models.Model):
     posted_by = models.ForeignKey(User, related_name="user_comments", on_delete = models.CASCADE)
     posted_to = models.ForeignKey(Blog, related_name="blog_comments", on_delete = models.CASCADE)
+    desc = models.TextField(default="Comment")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

@@ -16,7 +16,11 @@ def dashboard(request):
     return render(request, 'dashboard.html', context)
 
 def admin(request):
-    return render(request, 'admin.html')
+    context = {
+        "users" : User.objects.all(),
+        "blogs" : Blog.objects.all(),
+    }
+    return render(request, 'admin.html', context)
 
 def profile(request):
     return render(request, 'profile.html')
