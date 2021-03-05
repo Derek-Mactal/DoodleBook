@@ -3,8 +3,11 @@
     margin: 0;
     padding: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
-}
 
+}
+body{
+    background-color: #edf2f4;
+}
 header{
     /* display: flex;
     align-items: center;
@@ -19,6 +22,7 @@ header{
     font-size: 40px;
     color: #2b2d42;
     padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 header .nav {
     display: flex;
@@ -37,6 +41,7 @@ header .nav a {
     font-size: 30px;
     /* border: 2px dotted red; */
     margin-top: 50px;
+    
 }
 
 .container form {
@@ -44,6 +49,7 @@ header .nav a {
     padding: 40px;
     border-radius: 25px;
     color: #0e1b2c;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .container form textarea {
@@ -55,11 +61,64 @@ header .nav a {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
 .container form canvas{
     background-color: white;
     border: black 1px solid;
 }
 
+
+/* CANVAS CSS BELOW */
+
+.tools{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 10px;
+}
+.tools .color-field{
+    height: 30px;
+    width: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    display:inline-block;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 0 3px;
+}
+
+.tools .button{
+    align-self: center;
+    width: 100px;
+    height: 30px;
+    border: 2px solid black;
+    cursor: pointer;
+    color: white;
+    background: #0e1b2c;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+.color-picker{
+    align-self: center;
+    margin: 0 5px;
+    height: 30px;
+}
+
+.pen-range{
+    align-self: center;
+    margin: 0 5px;
+}
+
+textarea{
+    border-radius: 20px;
+}
+#canvas{
+    border-radius: 20px;
+}
 .container form input[type=submit] {
     width: 70px;
     height: 30px;
@@ -85,27 +144,37 @@ header .nav a {
     font-size: 18px;
     padding: 40px;
     border-radius: 25px;
+<<<<<<< HEAD
     color: #0e1b2c;
+=======
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    
+>>>>>>> 37a6a943fcda1c3f912140a4b78221e8242b6f91
 }
-
 .description{
     background-color: white;
     border-radius: 10px;
     height: 100px;
     margin-bottom: 10px;
 }
-
+.name_created h3, p {
+    margin: 5px 0 0 5px;
+}
 .comment_section{
     margin-bottom:10px;
 }
 .comment_section p{
     display: inline;
+    
+    
 }
 .commenter{
     margin-left: 35px;
     display: inline;
 }
-
+.description{
+    padding: 10px;
+}
 .comment_here{
     height: 50px;
     width: 605px;
