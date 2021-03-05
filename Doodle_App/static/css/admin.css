@@ -45,6 +45,7 @@ table{
 }
 td{
     border-bottom: 2px black solid;
+    border-right: 2px black solid;
     padding-left: 25px;
     padding-right: 25px;
 }
