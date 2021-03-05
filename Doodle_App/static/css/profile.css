@@ -3,7 +3,9 @@
     padding: 0px;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
 }
-
+body{
+    background-color: #edf2f4;
+}
 header{
     /* display: flex;
     align-items: center;
@@ -18,6 +20,7 @@ header{
     font-size: 40px;
     color: #2b2d42;
     padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
 }
 header .nav {
     display: flex;
@@ -51,7 +54,7 @@ form {
     background-color: #457b9d;
     padding: 20px;
     border-radius: 25px;
-    color: #0e1b2c;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 form h4 {
