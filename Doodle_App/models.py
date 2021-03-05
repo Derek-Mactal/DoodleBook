@@ -1,5 +1,6 @@
 from django.db import models
-
+import re
+import bcrypt
 
 # Create your models here.
 
@@ -93,6 +94,35 @@ from django.db import models
 #         this_publisher.books.all()	# get all the books this publisher is publishing
 #         this_book.p ublishers.all()	# get all the publishers for this book
 
+EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9.+_-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]+$')
+
+class webManager(models.Manager):
+    def registrationValidator(self, postData):
+        errors = {}
+        if len(postData['firstName']) < 2:
+            errors['firstName'] = "First Name must be at least 2 characters!"
+        if len(postData['lastName']) < 3:
+            errors['lastName'] = "Last Name must be at least 3 characters!"
+        if not EMAIL_REGEX.match(postData['email']):
+            errors['emailFormat'] = "Invalid Email Address!"
+        elif User.objects.filter(email=postData['email']):
+            errors['exists'] = "Email is unavailable!"
+        if len(postData['password']) < 8:
+            errors['password'] = "Password length must be at least 8 characters!"
+        if postData['password'] != postData['confirmPW']:
+            errors['passwordMatch'] = "The passwords do not match, please make sure they match!"
+        return errors
+
+    def loginValidator(self, postData):
+        errors = {}
+        if not EMAIL_REGEX.match(postData['email']):
+            errors['email'] = "Not a valid Email Address!"
+        if not postData['email']:
+            errors['requiredEmail'] = "Login Email required!"
+        if not postData['password']:
+            errors['requiredPassword'] ="Login Password required!"
+        return errors
+    
 class User(models.Model):
     first_name = models.CharField(max_length=30)
     last_name = models.CharField(max_length=40)
@@ -104,6 +134,7 @@ class User(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     #blogs
     #user_comments
+    objects = webManager()
 
 class Blog(models.Model):
     title = models.CharField(max_length=100)
@@ -114,6 +145,7 @@ class Blog(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     picture = models.ImageField(null=True)
     #blog_comments
+    objects = webManager()
 
 class Comment(models.Model):
     posted_by = models.ForeignKey(User, related_name="user_comments", on_delete = models.CASCADE)
@@ -121,3 +153,4 @@ class Comment(models.Model):
     description = models.TextField(default="Comment")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    objects = webManager()

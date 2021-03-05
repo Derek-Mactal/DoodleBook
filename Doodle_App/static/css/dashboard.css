@@ -62,10 +62,26 @@ header .nav a {
     margin-bottom: 20px;
 }
 
+#postTitle {
+    width: 350px;
+    height: 30px;
+    font-size: 18px;
+    padding: 4px;
+    display: block;
+}
+
+.title {
+    margin-top: 10px;
+}
+
 
 .container form canvas{
     background-color: white;
     border: black 1px solid;
+}
+
+.submit {
+    padding-top: 20px;
 }
 
 
@@ -144,12 +160,8 @@ textarea{
     font-size: 18px;
     padding: 40px;
     border-radius: 25px;
-<<<<<<< HEAD
-    color: #0e1b2c;
-=======
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     
->>>>>>> 37a6a943fcda1c3f912140a4b78221e8242b6f91
 }
 .description{
     background-color: white;

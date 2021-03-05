@@ -12,7 +12,7 @@
 <header>
     <h1>DoodleBook</h1>
     <div class="nav">
-        <p>Welcome <a href="">{{user.first_name}}</a>!</p>
+        <p>Welcome <a href="profile/{{request.session.userID}}">{{user.first_name}}</a>!</p>
         <a href="/logout">Logout</a>
     </div>
 </header>
@@ -21,8 +21,11 @@
         <form action = "#" method = "POST">
             {% csrf_token %}
             <h2>Create a Blog</h2>
+            <div class="title">
+                <label for="blogTitle">Title</label>
+                <input id="postTitle" type="text" name="blogTitle">
+            </div>
             <textarea></textarea>
-
             
             <div class ="field">
                 <canvas id="canvas"></canvas>
