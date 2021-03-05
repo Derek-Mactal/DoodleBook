@@ -14,7 +14,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(143, 143, 202);
+    background-color: #e63946;
     font-size: 40px;
     color: white;
     padding: 20px;
@@ -29,11 +29,13 @@ header .nav {
 header .nav a {
     color: white;
 }
-
+.container h1 {
+    margin-right: 40px;    
+}
 .container{
     display: flex; 
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 40px;
     font-size: larger;
 }
 
@@ -41,7 +43,12 @@ table{
     border: 2px black solid;
     border-collapse: collapse;
     height: 100px;
-    width: fit-content;
+    /* width: fit-content; */
+    background-color: #457b9d;
+}
+th {
+    border-right: 2px black solid;
+    border-bottom: 2px black solid;
 }
 td{
     border-bottom: 2px black solid;
