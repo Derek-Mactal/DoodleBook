@@ -28,17 +28,17 @@
             <textarea></textarea>
             
             <div class ="field">
-                <canvas id="canvas"></canvas>
+                <canvas id="canvas" width = "600" height ="300"></canvas>
                 <div class ="tools">
                     <button type = "button" class = "button">Undo</button>
-                    <button onClick="clear_canvas()" type = "button" class = "button">Clear</button>
+                    <button class = "clearButton" type = "button" >Clear</button>
 
-                    <div onclick="change_Color(this)" class="color-field" style="background: red;"></div>
-                    <div onClick="change_color(this)" class="color-field" style="background: green;"></div>
-                    <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
-                    <div onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
+                    <div class="color-field" style="background: red;"></div>
+                    <div class="color-field" style="background: green;"></div>
+                    <div class="color-field" style="background: blue;"></div>
+                    <div class="color-field" style="background: yellow;"></div>
 
-                    <input oninput="draw_color = this.value" type="color" class ="color-picker">
+                    <input type="color" class ="color-range">
                     <input type="range" min="1" max="100" class="pen-range"
                             oninput="draw_width = this.value">
                 </div>
