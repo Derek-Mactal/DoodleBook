@@ -20,6 +20,7 @@
     </header>
     <div class = 'container'>
         <form action = "#" method = "POST">
+            {% csrf_token %}
             <h1>Edit User Below..</h1>
             <label>Change Username:</label>
             <input type = "text" name = "username">
