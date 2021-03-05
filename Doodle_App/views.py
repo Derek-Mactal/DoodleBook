@@ -43,7 +43,12 @@ def dashboard(request):
     #     return render(request, 'dashboard.html', context)
     # else:
     #     return redirect('/')
-    return render(request, "index.html")
+    context = {
+        "users" : User.objects.all(),
+        "blogs" : Blog.objects.all(),
+        "comments" : Comment.objects.all(),
+    }
+    return render(request, "dashboard.html", context)
 
 def admin(request):
     # if request.session['user_level'] == 1:
@@ -56,9 +61,13 @@ def admin(request):
     #     return render(request, 'admin.html', context)
     # else:
     #     return redirect('/dashboard')
-    return render(request, "admin.html")
+    context = {
+        "users" : User.objects.all(),
+        "blogs" : Blog.objects.all(),
+        }
+    return render(request, "admin.html", context)
 
-def profile(request,num):
+def profile(request):
     # user = User.objects.get(id=num)
     # if 'userID' in request.session and request.session['userID'] == user[id]:
     #     context = {
