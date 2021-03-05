@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.http import JsonResponse
-from Doodle_App.models import User, Blog
+from Doodle_App.models import User, Blog, Comment
 
 def index(request):
     return render(request,'index.html')
@@ -12,6 +12,7 @@ def dashboard(request):
     context = {
         "users" : User.objects.all(),
         "blogs" : Blog.objects.all(),
+        "comments" : Comment.objects.all(),
     }
     return render(request, 'dashboard.html', context)
 
