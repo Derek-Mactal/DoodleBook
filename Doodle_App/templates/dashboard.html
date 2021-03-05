@@ -28,12 +28,23 @@
     <div class="blogs">
         <div>
             <h1>Blogs</h1>
-            {% for blog in blogs %}
-                {{blog.title}}
-                {{blog.author.first_name}}{{blog.author.last_name}}
-                {{blog.desc}}
-                {{blog.created_at}}
-            {% endfor %}
+            <div class = "bloginfo">
+                {% for blog in blogs %}
+                    <h2>{{blog.title}}</h2>
+                    <div class = "name_created">
+                        <h3>By: {{blog.author.first_name}} {{blog.author.last_name}}</h3>
+                        <p>{{blog.created_at}}</p>
+                    <p class = "description">{{blog.desc}}</p>
+                {% endfor %}
+                <h4>Comments:</h4>
+                {% for comment in comments %}
+                    <div class ="comment_section">
+                        <p class = 'commenter'>{{comment.posted_by.first_name}} said:</p>
+                        <p>Hey Allen, Those are some sick lines, forget software engineering and pursue that dream of becoming the best rap artist ever!</p>
+                    </div>
+                    <input class ="comment_here" type ="text" value="Type here to comment..">
+                {% endfor %}
+            </div>
         </div>
     </div>
 </body>
