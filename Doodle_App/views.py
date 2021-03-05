@@ -44,8 +44,10 @@ def dashboard(request):
         return redirect('/')
 
 def admin(request):
-    if 'user_level' in request.session == 1 and 'userID' in request.session:
+    if request.session['user_level'] == 1:
+        user = User.objects.get(id=request.session['userID'])
         context = {
+            "user": user,
             "users" : User.objects.all(),
             "blogs" : Blog.objects.all(),
         }
@@ -55,7 +57,7 @@ def admin(request):
 
 def profile(request,num):
     user = User.objects.get(id=num)
-    if 'userID' in request.session and request.session['userID'] == user.id:
+    if 'userID' in request.session and request.session['userID'] == user[id]:
         context = {
             'user': user,
         }

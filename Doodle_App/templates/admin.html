@@ -12,7 +12,7 @@
     <header>
         <h1>DoodleBook</h1>
         <div class="nav">
-            <p>Welcome <a href="">User</a>!</p>
+            <p>Welcome <a href="profile/{{request.session.userID}}">{{user.first_name}}</a>!</p>
             <a href="/dashboard">Home</a>
             <a href="/logout">Logout</a>
         </div>
