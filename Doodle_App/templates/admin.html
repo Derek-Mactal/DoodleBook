@@ -32,16 +32,14 @@
                 <td>{{user.first_name}} {{user.last_name}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.created_at}}</td>
-                <td></td>
-                <td><a href = "#">Delete</a> | <a href = "#">Edit</a> | <a href = "#">View</a> </td>
+                {%if user.user_level == 0%}
+                <td>Regular User</td>
+                {% else %}
+                <td>Admin</td>
+                {% endif %}
+                <td><a href = "/delete/{{user.id}}">Delete</a> | <a href = "/admin_edit/{{user.id}}">Edit</a> | <a href = "/profile/{{user.id}}">View</a> </td>
             </tr>
-            <tr>
-                <td>A-dawg</td>
-                <td>nella@gmail.com</td>
-                <td>february 21, 2021</td>
-                <td>DoodleBook Creator</td>
-                <td><a href = "#">Delete</a> | <a href = "#">Edit</a> | <a href = "#">View</a> </td>
-            </tr>
+            {% endfor %}
         </table>
     </div>
 </body>
