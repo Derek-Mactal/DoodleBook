@@ -24,7 +24,7 @@ def register(request):
             first_name=request.POST['firstName'],
             last_name=request.POST['lastName'],
             email=request.POST['email'],
-            password=password,
+            password=pw_hash,
             )
         request.session['userID'] = user.id
         request.session['user_level'] = user.user_level
