@@ -112,6 +112,7 @@ class Blog(models.Model):
     privacy = models.IntegerField(default=0) # 0 is public, 1 is private
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    picture = models.ImageField(null=True)
     #blog_comments
 
 class Comment(models.Model):
