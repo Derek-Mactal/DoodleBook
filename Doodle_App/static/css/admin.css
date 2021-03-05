@@ -43,6 +43,12 @@ table{
     height: 100px;
     width: fit-content;
 }
+
+th {
+    border-bottom: 2px black solid;
+    border-right: 2px black solid;
+    
+}
 td{
     border-bottom: 2px black solid;
     border-right: 2px black solid;
