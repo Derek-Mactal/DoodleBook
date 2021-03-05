@@ -65,6 +65,10 @@ header .nav a {
     display: flex;
     margin: auto;
 }
+.blogs{
+    display: block;
+    justify-content: center;
+}
 .blogs h1 {
     padding-left: 140px;
     font-size: 60px;
