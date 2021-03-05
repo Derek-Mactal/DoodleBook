@@ -1,55 +1,33 @@
-*{
-    margin: 0;
-    padding: 0px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-header{
-    /* display: flex;
-    align-items: center;
-    background-color: aliceblue;
-    border: 1px black solid;
-    font-size: 30px;
-    height: 85px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(143, 143, 202);
-    font-size: 40px;
-    color: white;
-    padding: 20px;
-}
-header .nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 25px;
-    width: 500px;
-}
-header .nav a {
-    color: white;
-}
-
-.container{
-    margin: auto;
-    margin-top: 20px;
-    outline: red dotted 1px;
-    background-color: rgb(195, 193, 193);
-    display: block;
-    /* justify-content: flex-start; */
-    border-radius: 20px;
-    width: 800px;
-    height: 600px;
-    padding: 20px;
-}
-.container label,input{
-    display:block;
-    font-size: larger;
-    margin-left: 25px;
-    margin-top:15px;
-}
-    .submit{
-        display: block;
-        justify-self: self-end;
-        background-color: rgb(72, 199, 72)
-    }
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </head>
+    <header>
+        <h1>DoodleBook</h1>
+        <h4>Blog all day</h4>
+    </header>
+    <body>
+        <div class="container">
+            <form>
+                <h2>Log In</h2>
+                <div class="row">
+                    <label>Email</label>
+                    <input type="text">
+                </div>
+                <div class="row">
+                    <label>Password</label>
+                    <input type="password">
+                </div>
+                <input type="submit" value="Log In">
+            </form>
+        </div>
+    </body>
+</html>
