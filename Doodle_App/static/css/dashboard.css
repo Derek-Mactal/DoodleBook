@@ -54,6 +54,10 @@ header .nav a {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+.container form canvas{
+    background-color: white;
+    border: black 1px solid;
+}
 
 .container form input[type=submit] {
     width: 70px;
@@ -80,6 +84,7 @@ header .nav a {
     font-size: 18px;
     padding: 40px;
     border-radius: 25px;
+    
 }
 
 .description{
@@ -98,4 +103,10 @@ header .nav a {
 .commenter{
     margin-left: 35px;
     display: inline;
+}
+
+.comment_here{
+    height: 30px;
+    width: 250px;
+    border-radius: 10px;
 }
