@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% load static %}
+    <script src="{% static 'js/main.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
     <title>Document</title>
 </head>
@@ -21,6 +22,9 @@
             {% csrf_token %}
             <h2>Create a Blog</h2>
             <textarea></textarea>
+            <div class ="field">
+                <canvas id = "drawingCanvas"></canvas>
+            </div>
             <div class="submit">
                 <input type="submit" value="Post">
             </div>
@@ -42,8 +46,12 @@
                     <div class ="comment_section">
                         <p class = 'commenter'>{{comment.posted_by.first_name}} said:</p>
                         <p>Hey Allen, Those are some sick lines, forget software engineering and pursue that dream of becoming the best rap artist ever!</p>
+                        <p>!{{comment.description}}!</p>
                     </div>
-                    <input class ="comment_here" type ="text" value="Type here to comment..">
+                    <form action="/postComment" method="POST">
+                        <textarea class="comment_here"></textarea>
+                        <input class="commentSubmit" type="submit" value="Post Comment">
+                    </form>
                 {% endfor %}
             </div>
         </div>
